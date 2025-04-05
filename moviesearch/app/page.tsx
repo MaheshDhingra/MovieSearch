@@ -13,7 +13,7 @@ export default function Home() {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [loading, setLoading] = useState(false);
 
-  const API_KEY = "b9ba495b";
+  const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
 
   const searchMovies = async (title: string) => {
     if (!title) return;
